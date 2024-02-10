@@ -91,7 +91,17 @@ def WStartup():
                     add_to_startup_windows(sys.argv[0])
                     
             else:
-                print("nop")   
+                print("nop")
+                
+def add_to_csv(x,fileName):
+    with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(x)
+    print("Ajout effectué")
+    logging.info(f"{x} écrit dans {fileName}")
+    
+def deletePeople():
+    print
 
 
 def main():
@@ -101,6 +111,7 @@ Veuillez choisir une option parmi les suivantes :
     [1] Ajouter une personne
     [2] Supprimer une personne
     [3] ON/OFF Startup Windows
+    [4] Ouvrir la liste
         
 d3 : pour avoir la description de la commande [3]
 ''')
@@ -116,10 +127,22 @@ d3 : pour avoir la description de la commande [3]
             print("Permets que le script se lance au démargé de l'ordinateur pour vérifier si c'est l'anniversaire d'une personne")
             
         elif choice == '1':
-            print("1")
+            add = []
+            
+            nom = str(input("> Nom :"))
+            add.append(nom)
+            
+            prenom = str(input("> Prenom :"))
+            add.append(prenom)
+            
+            date = str(input("> Date :"))
+            add.append(date)
+            
+            add_to_csv(add,'test.csv')
+            add = []
             
         elif choice == '2':
-            print("2")
+            choice2 = input("> ")
             
         elif choice == '3':
             WStartup()

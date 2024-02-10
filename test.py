@@ -47,8 +47,13 @@ objets = openFile('data.csv')
 
 config = openFile('config.csv')
 
-print(config)
+def add_to_csv(x,fileName):
+    with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=x.keys())
+        writer.writerow(x)
 
+new_row = {'nom': 'Lebaeaeaec', 'prenom': 'Buyob', 'date': '31/02/2010'}
+add_to_csv(new_row, 'test.csv')
 # date = []
 # for i in data:
 #     date.append(i["date"])
