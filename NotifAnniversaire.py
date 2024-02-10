@@ -93,6 +93,8 @@ def WStartup():
             else:
                 print("nop")
                 
+                
+                
 def add_to_csv(x,fileName):
     with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
@@ -100,8 +102,11 @@ def add_to_csv(x,fileName):
     print("Ajout effectué")
     logging.info(f"{x} écrit dans {fileName}")
     
+    
+    
 def deletePeople():
     print
+
 
 
 def main():
@@ -111,7 +116,6 @@ Veuillez choisir une option parmi les suivantes :
     [1] Ajouter une personne
     [2] Supprimer une personne
     [3] ON/OFF Startup Windows
-    [4] Ouvrir la liste
         
 d3 : pour avoir la description de la commande [3]
 ''')
