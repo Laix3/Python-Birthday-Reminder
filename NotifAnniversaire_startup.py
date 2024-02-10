@@ -1,4 +1,3 @@
-import csv
 import os
 import shutil
 import sys
@@ -12,7 +11,6 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(levelname)s - %(asctime)s - %(message)s'
 )
-
 
 
 def add_to_startup_windows(src_file):

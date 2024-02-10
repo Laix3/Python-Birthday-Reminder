@@ -1,7 +1,3 @@
-import csv
-import os
-import shutil
-import sys
 import logging
 
 from NotifAnniversaire_startup import *
@@ -44,19 +40,19 @@ d3 : pour avoir la description de la commande [3]
             print("Permets que le script se lance au démargé de l'ordinateur pour vérifier si c'est l'anniversaire d'une personne")
             
         elif choice == '1':
-            add = []
+            NPD = []
             
             nom = str(input("> Nom : "))
-            add.append(nom)
+            NPD.append(nom)
             
             prenom = str(input("> Prenom : "))
-            add.append(prenom)
+            NPD.append(prenom)
             
             date = str(input("> Date : "))
-            add.append(date)
+            NPD.append(date)
             
-            add_to_csv(add,'test.csv')
-            add = []
+            add_to_csv(NPD,'data.csv')
+            NPD = []
             
         elif choice == '2':
             choice2 = input("> ")
