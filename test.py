@@ -54,6 +54,8 @@ def add_to_csv(x,fileName):
 
 new_row = {'nom': 'Lebaeaeaec', 'prenom': 'Buyob', 'date': '31/02/2010'}
 add_to_csv(new_row, 'test.csv')
+
+
 # date = []
 # for i in data:
 #     date.append(i["date"])
