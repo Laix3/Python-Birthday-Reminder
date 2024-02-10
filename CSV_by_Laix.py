@@ -24,7 +24,7 @@ def openFile(fichier):
     else:
         logging.info(f"Fichier, {fichier} ouvert")
         file = open(fichier, 'r', encoding='utf8')
-        csv_en_dict = csv.DictReader(file, delimiter=';')
+        csv_en_dict = csv.DictReader(file, delimiter=',')
         objets = [dict(ligne) for ligne in csv_en_dict]
     return objets
 

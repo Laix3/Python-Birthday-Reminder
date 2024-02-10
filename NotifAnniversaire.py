@@ -12,7 +12,7 @@ logging.basicConfig(
 
 
 data = openFile('data.csv')
-      
+print(data)
    
 def deletePeople():
     print
