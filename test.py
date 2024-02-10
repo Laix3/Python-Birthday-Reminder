@@ -23,24 +23,7 @@ def openFile(fichier):
 
 
 
-def listCleanner(xList):
-    ''' Permet d'enlever les '' d'un liste
-    in : example : file.csv
-    out : dictionnaire du csv    
-    '''
-    # verifie si c'est une liste
-    if isinstance(xList, list):
-        for i in xList:
-            if i == '':
-                xList.remove(i)
-            else:
-                pass
-        print("Fin du nettoyage de la liste")
 
-        return xList
-    
-    else:
-        return "Cleaner : Vous n'avez pas sélectionné une liste"
 
 
 objets = openFile('data.csv')
