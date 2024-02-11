@@ -23,13 +23,12 @@ def deletePeople():
 
 def WStartup(src_file):
     startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-    
     dest_file = os.path.join(startup_folder, os.path.basename(src_file))
 
     shutil.copy(src_file, dest_file)
 
-    print("L'option Windows Startup est active.")
-    logging.info("L'option Windows Startup est active.")
+    print("L'option Windows Startup est désormais activée")
+    logging.info("L'option Windows Startup est désormais activee")
 
 
 
@@ -81,8 +80,8 @@ d3 : pour avoir la description de la commande [3]
 
                 if YorN.lower() == 'y':
                     os.remove(dest_file)
-                    print("L'option Windows Startup est desactive")
-                    logging.info("L'option Windows Startup est desactive")
+                    print("L'option Windows Startup est désormais désactivée")
+                    logging.info("L'option Windows Startup est désormais désactivee")
 
                 elif YorN.lower() == 'n':
                     pass
