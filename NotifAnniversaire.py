@@ -2,8 +2,6 @@ import logging
 import os
 import winshell
 
-
-
 from CSV_by_Laix import *
 
 
@@ -79,6 +77,7 @@ def WStartup(src_file):
             print("Choix invalide. Veuillez sélectionner une option valide.")
 
 
+
 def main():
     print('''
 Veuillez choisir une option parmi les suivantes :
@@ -117,7 +116,6 @@ d3 : pour avoir la description de la commande [3]
             
         elif choice == '3':
             WStartup('NotifAnniversaire_startup.py')
-
                 
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")
