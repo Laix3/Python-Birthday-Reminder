@@ -16,6 +16,7 @@ data = openFile('data.csv')
    
 def deletePeople():
     print()
+    # mettre ous biblio pandas car il y a la numerotation des ligne : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
     
     
 
