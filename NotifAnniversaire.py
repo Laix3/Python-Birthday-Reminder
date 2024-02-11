@@ -89,7 +89,7 @@ d3 : pour avoir la description de la commande [3]
                 if YorN.lower() == 'y':
                     print('b') # remplacer le 0 par 1
                 else:
-                    print('abb') 
+                    WStartup('NotifAnniversaire_startup.py')
                     
             elif WSvalue == 0:
                 print("L'option startup est désactivée, voulez-vous l'activer ?")
@@ -97,9 +97,9 @@ d3 : pour avoir la description de la commande [3]
                 YorN = input("> ")
                 
                 if YorN.lower() == 'y':
-                    print('a')
+                    WStartup('NotifAnniversaire_startup.py')
                 else:
-                    print('abb')           
+                    print('b') # remplacer le 1 par 0
                     
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")
