@@ -18,17 +18,6 @@ data = openFile('data.csv')
 def deletePeople():
     print()
     # mettre ous biblio pandas car il y a la numerotation des ligne : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
-    
-
-
-def WStartup(src_file):
-    startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-    dest_file = os.path.join(startup_folder, os.path.basename(src_file))
-
-    shutil.copy(src_file, dest_file)
-
-    print("L'option Windows Startup est désormais activée")
-    logging.info("L'option Windows Startup est désormais activee")
 
 
 
@@ -80,6 +69,7 @@ d3 : pour avoir la description de la commande [3]
 
                 if YorN.lower() == 'y':
                     os.remove(dest_file)
+
                     print("L'option Windows Startup est désormais désactivée")
                     logging.info("L'option Windows Startup est désormais désactivee")
 
@@ -95,7 +85,10 @@ d3 : pour avoir la description de la commande [3]
                 YorN = input("> ")
 
                 if YorN.lower() == 'y':
-                    WStartup('NotifAnniversaire_startup.py')
+                    shutil.copy('NotifAnniversaire_startup.py', dest_file)
+
+                    print("L'option Windows Startup est désormais activée")
+                    logging.info("L'option Windows Startup est désormais activee")
 
                 elif YorN.lower() == 'n':
                     pass
