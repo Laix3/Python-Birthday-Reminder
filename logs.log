@@ -1,0 +1,12 @@
+INFO - 2024-02-11 21:50:22,708 - Suppression de [{'nom': 'poulpe', 'prenom': 'laix', 'date': '26/04/2001'}] reussie avec succes
+INFO - 2024-02-11 21:51:27,243 - Suppression de [] reussie avec succes
+INFO - 2024-02-11 21:51:42,694 - Suppression de [] reussie avec succes
+INFO - 2024-02-11 21:53:27,275 - ['M', 'C', 'A'] écrit dans data.csv
+INFO - 2024-02-11 21:53:32,920 - Suppression de [] reussie avec succes
+INFO - 2024-02-11 21:53:47,103 - ['M', 'A', 'C'] écrit dans data.csv
+INFO - 2024-02-11 21:54:05,901 - Suppression de [] reussie avec succes
+INFO - 2024-02-11 21:54:09,655 - Suppression de [] reussie avec succes
+INFO - 2024-02-11 21:54:54,228 - Suppression de [{'nom': 'lebec', 'prenom': 'bob', 'date': '31/02/2010'}] reussie avec succes
+INFO - 2024-02-11 21:55:03,638 - Suppression de [{'nom': 'poulpe', 'prenom': 'laix', 'date': '26/04/2001'}] reussie avec succes
+INFO - 2024-02-11 21:55:25,556 - Suppression de [] reussie avec succes
+INFO - 2024-02-11 21:55:31,079 - Suppression de [{'nom': 'poulpe', 'prenom': 'laix', 'date': '26/04/2001'}] reussie avec succes

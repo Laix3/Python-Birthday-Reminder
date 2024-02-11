@@ -17,21 +17,39 @@ def remove_person():
 
     recherche1 = []
     for i in data:
-        if i["nom"] == nom:
+        if i["nom"] == nom.lower():
             recherche1.append(i)
+    
+    if len(recherche1) <= 1:
+        data_restant = [personne for personne in data if personne not in recherche1]
 
-    if len(recherche1) > 1:
+        with open('data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ['nom', 'prenom', 'date']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=',')
+            writer.writeheader()
+            writer.writerows(data_restant)
+
+        print(f"Suppression de {recherche1} réussie avec succès")
+        logging.info(f"Suppression de {recherche1} reussie avec succes")
+
+
+    elif len(recherche1) > 1:
         prenom = input("> Prenom : ")
 
         recherche2 = []
         for i in recherche1:
-            if i["prenom"] == prenom:
+            if i["prenom"] == prenom.lower():
                 recherche2.append(i)
-        return recherche2
-    
-    else:
-        print("Une erreur est survenue lors de la recherche pour suppression")
-    
-    return recherche1
 
-print(remove_person())
+        data_restant = [personne for personne in data if personne not in recherche2]
+
+        with open('data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ['nom', 'prenom', 'date']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=',')
+            writer.writeheader()
+            writer.writerows(data_restant)
+
+        print(f"Suppression de {recherche2} réussie avec succès")
+        logging.info(f"Suppression de {recherche2} reussie avec succes")
+
+remove_person()
