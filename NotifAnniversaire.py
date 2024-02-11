@@ -23,10 +23,8 @@ def deletePeople():
 def WStartup(src_file):
     startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
     
-    # Chemin de destination du fichier dans le dossier de démarrage
     dest_file = os.path.join(startup_folder, os.path.basename(src_file))
 
-    # Copie le fichier source dans le dossier de démarrage
     shutil.copy(src_file, dest_file)
 
     print("Le programme a ete ajoute au demarrage de Windows.")
@@ -48,9 +46,6 @@ d3 : pour avoir la description de la commande [3]
 
         choice = input("> ")
         
-        # if int(choice) == ValueError:
-        #     print("Choix invalide. Veuillez sélectionner un chiffre.")
-        
         if choice == 'd3':
             print("Permets que le script se lance au démargé de l'ordinateur pour vérifier si c'est l'anniversaire d'une personne")
             
@@ -66,7 +61,7 @@ d3 : pour avoir la description de la commande [3]
             date = str(input("> Date : "))
             NPD.append(date)
             
-            add_to_csv(NPD,'data.csv')
+            add_csv(NPD,'data.csv')
             NPD = []
             
         elif choice == '2':
@@ -90,6 +85,10 @@ d3 : pour avoir la description de la commande [3]
                 if YorN.lower() == 'y':
                     r = csv.reader(open('config.csv'))
                     lines = list(r)
+                    lines[1][1] = 0
+                    with open('test.csv', 'w', newline='', encoding='utf-8') as file:
+                        writer = csv.writer(file)
+                        writer.writerows(lines)
                     
                 else:
                     WStartup('NotifAnniversaire_startup.py')
@@ -102,7 +101,12 @@ d3 : pour avoir la description de la commande [3]
                 if YorN.lower() == 'y':
                     WStartup('NotifAnniversaire_startup.py')
                 else:
-                    print('b') # remplacer le 1 par 0
+                    r = csv.reader(open('config.csv'))
+                    lines = list(r)
+                    lines[1][1] = 1
+                    with open('test.csv', 'w', newline='', encoding='utf-8') as file:
+                        writer = csv.writer(file)
+                        writer.writerows(lines)
                     
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")

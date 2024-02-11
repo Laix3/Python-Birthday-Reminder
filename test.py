@@ -3,23 +3,7 @@ import os
 import shutil
 import sys
 
-def openFile(fichier):
-    ''' Permet d'ouvrir un fichier csv et de convertir en dictionnaire
-    in : example : file.csv
-    out : dictionnaire du csv    
-    '''
-    try:
-        file = open(fichier, 'r', encoding='utf8')
-
-    except FileNotFoundError:
-        print('Fichier introuvable :/')
-
-    else:
-        print('Fichier CSV trouvé !')
-        file = open(fichier, 'r', encoding='utf8')
-        csv_en_dict = csv.DictReader(file, delimiter=';')
-        objets = [dict(ligne) for ligne in csv_en_dict]
-    return objets
+from CSV_by_Laix import *
 
 
 objets = openFile('data.csv')
@@ -28,8 +12,10 @@ config = openFile('config.csv')
 
 r = csv.reader(open('config.csv'))
 lines = list(r)
-print(lines)
-lines[1][0] = 1
+lines[1][1] = 1
+with open('test.csv', 'w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerows(lines)
 
 # date = []
 # for i in data:
