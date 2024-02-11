@@ -1,5 +1,8 @@
 import logging
 import ctypes
+import datetime
+
+from CSV_by_Laix import openFile
 
 logging.basicConfig(
     filename='logs.log',
@@ -7,7 +10,19 @@ logging.basicConfig(
     format='%(levelname)s - %(asctime)s - %(message)s'
 )
 
-# FAIRE POUR CA CHECK SI C'EST LANNIVERSAIRE D'UNE PERSONNE
+
+data = openFile('data.csv')
+
+dates = []
+for i in data:
+    dates.append(i["date"])
+    name = i["name"]
 
 
-ctypes.windll.user32.MessageBoxW(0, "Text test", "Title test", 1)
+for date_anniversaire in dates:
+    if date_anniversaire  == (datetime.date.today().strftime("%d/%m")):
+        ctypes.windll.user32.MessageBoxW(0, f"C'est l'anniversaire de {name} aujourd'hui !", "Anniversaire", 1)
+    else:
+        quit()
+
+ctypes.windll.user32.MessageBoxW(0, "END", "END", 1)
