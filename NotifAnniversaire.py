@@ -1,6 +1,7 @@
 import logging
+import os
+import shutil
 
-from NotifAnniversaire_startup import *
 from CSV_by_Laix import *
 
 
@@ -18,7 +19,7 @@ def deletePeople():
     print()
     # mettre ous biblio pandas car il y a la numerotation des ligne : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
     
-    
+
 
 def WStartup(src_file):
     startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
@@ -27,8 +28,9 @@ def WStartup(src_file):
 
     shutil.copy(src_file, dest_file)
 
-    print("Le programme a ete ajoute au demarrage de Windows.")
-    logging.info("Le programme a ete ajoute au demarrage de Windows.")
+    print("L'option Windows Startup est active.")
+    logging.info("L'option Windows Startup est active.")
+
 
 
 def main():
@@ -46,7 +48,7 @@ d3 : pour avoir la description de la commande [3]
 
         choice = input("> ")
         
-        if choice == 'd3':
+        if choice.lower() == 'd3':
             print("Permets que le script se lance au démargé de l'ordinateur pour vérifier si c'est l'anniversaire d'une personne")
             
         elif choice == '1':
@@ -68,58 +70,41 @@ d3 : pour avoir la description de la commande [3]
             choice2 = input("> ")
             
         elif choice == '3':
-            config = openFile('config.csv')
-            
-            WSvalue = 0
-            
-            for i in config:
-                if i["name"] == 'startup':
-                    WSvalue = i["value"]
-            
-            print(WSvalue)
 
+            startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
+            dest_file = os.path.join(startup_folder, os.path.basename('NotifAnniversaire_startup.py'))
             
-            if int(WSvalue) == 1 :
-                print("L'option startup est activée, voulez-vous la désactiver ?")
+            if os.path.exists(dest_file) == True:
+                print("L'option Windows Startup est activée, voulez-vous la désactiver ?")
                 print('Y ou N')
                 YorN = input("> ")
-                
+
                 if YorN.lower() == 'y':
-                    r = csv.reader(open('config.csv'))
-                    lines = list(r)
-                    lines[1][1] = 0
-                    with open('test.csv', 'w', newline='', encoding='utf-8') as file:
-                        writer = csv.writer(file)
-                        writer.writerows(lines)
-                    print("Option Windows Startup désactiver")
-                    
+                    os.remove(dest_file)
+                    print("L'option Windows Startup est desactive")
+                    logging.info("L'option Windows Startup est desactive")
+
                 elif YorN.lower() == 'n':
-                    WStartup('NotifAnniversaire_startup.py')
-                
+                    pass
+
                 else:
                     print("Choix invalide. Veuillez sélectionner une option valide.")
-                    
-
-            elif WSvalue == 0:
-                print("L'option startup est désactivée, voulez-vous l'activer ?")
+            
+            else:
+                print("L'option Windows Startup est désactivée, voulez-vous l'activer ?")
                 print('Y ou N')
                 YorN = input("> ")
-                
+
                 if YorN.lower() == 'y':
                     WStartup('NotifAnniversaire_startup.py')
 
                 elif YorN.lower() == 'n':
-                    r = csv.reader(open('config.csv'))
-                    lines = list(r)
-                    lines[1][1] = 1
-                    with open('test.csv', 'w', newline='', encoding='utf-8') as file:
-                        writer = csv.writer(file)
-                        writer.writerows(lines)
-                    print("Option Windows Startup désactiver")
-                
+                    pass
+
                 else:
                     print("Choix invalide. Veuillez sélectionner une option valide.")
-      
+
+                
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")
         
