@@ -6,73 +6,33 @@ import sys
 from CSV_by_Laix import *
 
 
-objets = openFile('data.csv')
+data = openFile('data.csv')
 config = openFile('config.csv')
 
+x = data.lower()
+print(x)
 
-print(config)
-
-# date = []
-# for i in data:
-#     date.append(i["date"])
-# print(date)
-
-
-# def WStartup():
-#             config = openFile('config.csv')
-            
-#             WSvalue = []
-#             for i in config:
-#                 if i["name"] == 'startup':
-#                     WSvalue.append(i["value"])
-
-            
-#             if int(WSvalue[0]) == 1 :
-#                 print("L'option startup est activée, voulez-vous la désactiver ?")
-#                 print('Y ou N')
-#                 YorN = input("> ")
-                
-#                 if YorN.lower() == 'y':
-#                     print('b') # remplacer le 0 par 1
-#                 else:
-#                     print('abb') 
-                    
-#             elif int(WSvalue[0]) == 0:
-#                 print("L'option startup est désactivée, voulez-vous l'activer ?")
-#                 print('Y ou N')
-#                 YorN = input("> ")
-                
-#                 if YorN.lower() == 'y':
-#                     print('a')
-#                 else:
-#                     print('abb')           
-            
-#             if int(WSvalue[0]) == 1 :
-#                 startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-#                 dest_file = os.path.join(startup_folder, 'msg.py')
-                
-#                 if os.path.exists(dest_file):
-#                     print("Démarrage automatique désactivé.")
-#                     remove_Wstartup()
-#                 else:
-#                     print("Démarrage automatique activé.")
-#                     add_Wstartup(sys.argv[0])
-                    
-#             else:
-#                 print("nop")
+def remove_person():
+    print("Vous pouvez supprimer une personne directement dans le fichier data.csv (il faut une ligne vide à la fin)")
+    print("Veuillez entrer les informations de la personne que vous souhaitez supprimer")
+    nom = input("> Nom : ")
 
 
+    recherche1 = []
+    for i in data:
+        if i["nom"] == nom:
+            recherche1.append(i)
 
-# def add_Wstartup(src_file):
-#     startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-#     dest_file = os.path.join(startup_folder, 'NotifAnniversaire.py')
-#     if not os.path.exists(dest_file):
-#         shutil.copy(src_file, dest_file)
-#     else:
-#         print("Le script est déjà dans les éléments de démarrage.")
+    if len(recherche1) > 1:
+        prenom = input("> Prenom : ")
+        recherche2 = []
+        for i in recherche1:
+            if i["prenom"] == prenom:
+                recherche2.append(i)
+        return recherche2
+    else:
+        print("Une erreur est survenue lors de la recherche pour suppression")
+    
+    return recherche1
 
-# def remove_Wstartup():
-#     startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-#     dest_file = os.path.join(startup_folder, 'NotifAnniversaire.py')
-#     if os.path.exists(dest_file):
-#         os.remove(dest_file)
+print(remove_person())

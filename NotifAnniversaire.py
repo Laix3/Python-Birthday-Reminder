@@ -3,6 +3,7 @@ import os
 import winshell
 
 
+
 from CSV_by_Laix import *
 
 
@@ -15,10 +16,24 @@ logging.basicConfig(
 
 data = openFile('data.csv')
 
-   
-def deletePeople():
-    print()
-    # mettre ous biblio pandas car il y a la numerotation des ligne : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
+
+def remove_person():
+    print("Vous pouvez supprimer une personne directement dans le fichier data.csv (il faut une ligne vide à la fin fichier data.csv)")
+    print("Veuillez entrer les informations de la personne que vous souhaitez supprimer")
+    nom = input("> Nom :")
+    prenom = input("> Prenom :")
+
+    recherche1 = []
+    for i in data:
+        if i["nom"] == nom:
+            recherche1.append(i)
+    
+    recherche2 = []
+    for i in data:
+        if i["prenom"] == prenom:
+            recherche2.append(i)
+
+    return recherche2
 
 
 
@@ -98,8 +113,7 @@ d3 : pour avoir la description de la commande [3]
             NPD = []
             
         elif choice == '2':
-            choice2 = input("> ")
-            deletePeople()
+            remove_person()
             
         elif choice == '3':
             WStartup('NotifAnniversaire_startup.py')
