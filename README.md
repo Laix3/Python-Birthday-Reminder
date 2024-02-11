@@ -14,3 +14,6 @@ Terminal avec 3 options :
 - Ajouter le fait que le script puisse lire plusieurs .csv [ou le script combine les fichiers .csv temporairement] OU un fusionneur de csv
 
 - Arreter d'utiliser la biblio csv mais plutot pandas : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
+
+# Librairy
+pywin32

@@ -1,6 +1,7 @@
 import logging
 import os
-import shutil
+import winshell
+
 
 from CSV_by_Laix import *
 
@@ -19,6 +20,48 @@ def deletePeople():
     print()
     # mettre ous biblio pandas car il y a la numerotation des ligne : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
 
+
+
+def WStartup(src_file):
+    startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
+    shortcut_name = f'{src_file}.lnk'
+    shortcut_path = os.path.join(startup_folder, shortcut_name)
+    
+    if os.path.exists(shortcut_path):
+        print("L'option Windows Startup est activée, voulez-vous la désactiver ?")
+        print('Y ou N')
+        YorN = input("> ")
+
+        if YorN.lower() == 'y':
+            os.remove(shortcut_path)
+            print("L'option Windows Startup est désormais désactivée.")
+            logging.info("L'option Windows Startup est desormais désactivee.")
+
+        elif YorN.lower() == 'n':
+            pass
+
+        else:
+            print("Choix invalide. Veuillez sélectionner une option valide.")
+
+    else:
+        print("L'option Windows Startup est désactivée, voulez-vous l'activer ?")
+        print('Y ou N')
+        YorN = input("> ")
+
+        if YorN.lower() == 'y':
+            winshell.CreateShortcut(
+                Path=os.path.join(startup_folder, f'{src_file}.lnk'),
+                Target=src_file,
+                Description="Script de démarrage pour la notification d'anniversaire"
+            )
+            print("L'option Windows Startup est désormais activée.")
+            logging.info("L'option Windows Startup est desormais activee.")
+
+        elif YorN.lower() == 'n':
+            pass
+
+        else:
+            print("Choix invalide. Veuillez sélectionner une option valide.")
 
 
 def main():
@@ -59,43 +102,7 @@ d3 : pour avoir la description de la commande [3]
             deletePeople()
             
         elif choice == '3':
-
-            startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-            dest_file = os.path.join(startup_folder, os.path.basename('NotifAnniversaire_startup.py'))
-            
-            if os.path.exists(dest_file) == True:
-                print("L'option Windows Startup est activée, voulez-vous la désactiver ?")
-                print('Y ou N')
-                YorN = input("> ")
-
-                if YorN.lower() == 'y':
-                    os.remove(dest_file)
-
-                    print("L'option Windows Startup est désormais désactivée")
-                    logging.info("L'option Windows Startup est désormais désactivee")
-
-                elif YorN.lower() == 'n':
-                    pass
-
-                else:
-                    print("Choix invalide. Veuillez sélectionner une option valide.")
-            
-            else:
-                print("L'option Windows Startup est désactivée, voulez-vous l'activer ?")
-                print('Y ou N')
-                YorN = input("> ")
-
-                if YorN.lower() == 'y':
-                    shutil.copy('NotifAnniversaire_startup.py', dest_file)
-
-                    print("L'option Windows Startup est désormais activée")
-                    logging.info("L'option Windows Startup est désormais activee")
-
-                elif YorN.lower() == 'n':
-                    pass
-
-                else:
-                    print("Choix invalide. Veuillez sélectionner une option valide.")
+            WStartup('NotifAnniversaire_startup.py')
 
                 
         else:
