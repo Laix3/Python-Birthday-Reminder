@@ -5,7 +5,43 @@ import winshell
 from CSV_by_Laix import *
 
 
+try:
+    import ctypes
+except ImportError:
+    os.system("python -m pip install ctypes -q -q -q")
+    import ctypes
 
+try:
+    import datetime
+except ImportError:
+    os.system("python -m pip install datetime -q -q -q")
+    import datetime
+
+try:
+    import winshell
+except ImportError:
+    os.system("python -m pip install winshell -q -q -q")
+    import winshell
+
+try:
+    import logging
+except ImportError:
+    os.system("python -m pip install logging -q -q -q")
+    import logging
+
+try:
+    import colorama
+    from colorama import Fore, Back, Style
+except ImportError:
+    os.system("python -m pip install colorama -q -q -q")
+    import colorama
+    from colorama import Fore, Back, Style
+
+try:
+    from pystyle import *
+except:
+    os.system("python -m pip install pystyle -q -q -q")
+    from pystyle import *
 
 
 

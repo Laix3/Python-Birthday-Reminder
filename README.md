@@ -15,5 +15,7 @@ Terminal avec 3 options :
 
 - Arreter d'utiliser la biblio csv mais plutot pandas : https://stackoverflow.com/questions/11033590/change-specific-value-in-csv-file-via-python
 
+- Ajouter de la couleur avec pystyle ou colorama
+
 # Librairy
 pywin32
