@@ -28,8 +28,8 @@ def WStartup(src_file):
     # Copie le fichier source dans le dossier de démarrage
     shutil.copy(src_file, dest_file)
 
-    print("Le programme a été ajouté au démarrage de Windows.")
-    logging.info("Le programme a été ajouté au démarrage de Windows.")
+    print("Le programme a ete ajoute au demarrage de Windows.")
+    logging.info("Le programme a ete ajoute au demarrage de Windows.")
 
 
 def main():
@@ -72,7 +72,48 @@ d3 : pour avoir la description de la commande [3]
             choice2 = input("> ")
             
         elif choice == '3':
-            print()
+            config = openFile('config.csv')
+            
+            WSvalue = None
+            
+            for i in config:
+                if i["name"] == 'startup':
+                    WSvalue = i["value"]
+
+            
+            if WSvalue == 1 :
+                print("L'option startup est activée, voulez-vous la désactiver ?")
+                print('Y ou N')
+                YorN = input("> ")
+                
+                if YorN.lower() == 'y':
+                    print('b') # remplacer le 0 par 1
+                else:
+                    print('abb') 
+                    
+            elif WSvalue == 0:
+                print("L'option startup est désactivée, voulez-vous l'activer ?")
+                print('Y ou N')
+                YorN = input("> ")
+                
+                if YorN.lower() == 'y':
+                    print('a')
+                else:
+                    print('abb')           
+            
+            if WSvalue == 1 :
+                startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
+                dest_file = os.path.join(startup_folder, 'msg.py')
+                
+                if os.path.exists(dest_file):
+                    print("Démarrage automatique désactivé.")
+                    remove_Wstartup()
+                else:
+                    print("Démarrage automatique activé.")
+                    add_Wstartup(sys.argv[0])
+                    
+            else:
+                print("nop")
 
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")

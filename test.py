@@ -22,22 +22,17 @@ def openFile(fichier):
     return objets
 
 
-
-
-
-
 objets = openFile('data.csv')
-
 config = openFile('config.csv')
 
-def add_to_csv(x,fileName):
-    with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=x.keys())
-        writer.writerow(x)
 
-new_row = {'nom': 'Lebaeaeaec', 'prenom': 'Buyob', 'date': '31/02/2010'}
-add_to_csv(new_row, 'test.csv')
+WSvalue = None
+            
+for i in config:
+    if i["name"] == 'startup':
+        WSvalue = i["value"]
 
+print(WSvalue)
 
 # date = []
 # for i in data:
