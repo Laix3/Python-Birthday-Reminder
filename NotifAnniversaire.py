@@ -108,7 +108,7 @@ d3 : pour avoir la description de la commande [3]
             date = str(input("> Date : "))
             NPD.append(date)
             
-            add_csv(NPD,'data.csv')
+            add_to_csv(NPD,'data.csv')
             NPD = []
             
         elif choice == '2':

@@ -28,13 +28,14 @@ def openFile(x):
     return objets
 
 
-def add_csv(x,fileName):
+def add_to_csv(x,fileName):
     with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(x)
     print("Ajout de",x,"effectué")
     logging.info(f"{x} écrit dans {fileName}")
-    
+
+
     
 def listCleanner(xList):
     ''' Permet d'enlever les '' d'un liste
