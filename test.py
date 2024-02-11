@@ -29,7 +29,7 @@ config = openFile('config.csv')
 r = csv.reader(open('config.csv'))
 lines = list(r)
 print(lines)
-lines[1][1] = 1
+lines[1][0] = 1
 
 # date = []
 # for i in data:
