@@ -69,16 +69,17 @@ d3 : pour avoir la description de la commande [3]
             
         elif choice == '3':
             config = openFile('config.csv')
-            print(config)
             
-            WSvalue = None
+            WSvalue = 0
             
             for i in config:
                 if i["name"] == 'startup':
                     WSvalue = i["value"]
+            
+            print(WSvalue)
 
             
-            if WSvalue == 1 :
+            if int(WSvalue) == 1 :
                 print("L'option startup est activée, voulez-vous la désactiver ?")
                 print('Y ou N')
                 YorN = input("> ")
@@ -90,10 +91,15 @@ d3 : pour avoir la description de la commande [3]
                     with open('test.csv', 'w', newline='', encoding='utf-8') as file:
                         writer = csv.writer(file)
                         writer.writerows(lines)
+                    print("Option Windows Startup désactiver")
                     
-                else:
+                elif YorN.lower() == 'n':
                     WStartup('NotifAnniversaire_startup.py')
+                
+                else:
+                    print("Choix invalide. Veuillez sélectionner une option valide.")
                     
+
             elif WSvalue == 0:
                 print("L'option startup est désactivée, voulez-vous l'activer ?")
                 print('Y ou N')
@@ -101,14 +107,19 @@ d3 : pour avoir la description de la commande [3]
                 
                 if YorN.lower() == 'y':
                     WStartup('NotifAnniversaire_startup.py')
-                else:
+
+                elif YorN.lower() == 'n':
                     r = csv.reader(open('config.csv'))
                     lines = list(r)
                     lines[1][1] = 1
                     with open('test.csv', 'w', newline='', encoding='utf-8') as file:
                         writer = csv.writer(file)
                         writer.writerows(lines)
-                    
+                    print("Option Windows Startup désactiver")
+                
+                else:
+                    print("Choix invalide. Veuillez sélectionner une option valide.")
+      
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")
         
