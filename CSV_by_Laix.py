@@ -28,6 +28,7 @@ def openFile(x):
     return objets
 
 
+
 def add_to_csv(x,fileName):
     with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
