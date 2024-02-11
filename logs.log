@@ -1,6 +1,0 @@
-INFO - 2024-02-11 16:58:23,398 - [['name', 'value'], ['startup', 1]] écrit dans test.csv
-INFO - 2024-02-11 19:02:05,403 - Le programme a ete ajoute au demarrage de Windows.
-INFO - 2024-02-11 19:02:05,420 - L'option Windows Startup est active
-INFO - 2024-02-11 19:03:24,539 - L'option Windows Startup est active.
-INFO - 2024-02-11 19:04:14,755 - L'option Windows Startup est active.
-INFO - 2024-02-11 19:04:21,411 - L'option Windows Startup est desactive
