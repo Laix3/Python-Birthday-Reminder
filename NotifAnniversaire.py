@@ -69,6 +69,7 @@ d3 : pour avoir la description de la commande [3]
             
         elif choice == '3':
             config = openFile('config.csv')
+            print(config)
             
             WSvalue = None
             

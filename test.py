@@ -10,12 +10,7 @@ objets = openFile('data.csv')
 config = openFile('config.csv')
 
 
-r = csv.reader(open('config.csv'))
-lines = list(r)
-lines[1][1] = 1
-with open('test.csv', 'w', newline='', encoding='utf-8') as file:
-    writer = csv.writer(file)
-    writer.writerows(lines)
+print(config)
 
 # date = []
 # for i in data:
