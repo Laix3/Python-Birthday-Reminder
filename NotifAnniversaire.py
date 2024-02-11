@@ -56,6 +56,7 @@ d3 : pour avoir la description de la commande [3]
             
         elif choice == '2':
             choice2 = input("> ")
+            deletePeople()
             
         elif choice == '3':
 
