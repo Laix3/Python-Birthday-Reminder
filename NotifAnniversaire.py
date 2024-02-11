@@ -87,7 +87,9 @@ d3 : pour avoir la description de la commande [3]
                 YorN = input("> ")
                 
                 if YorN.lower() == 'y':
-                    print('b') # remplacer le 0 par 1
+                    r = csv.reader(open('config.csv'))
+                    lines = list(r)
+                    
                 else:
                     WStartup('NotifAnniversaire_startup.py')
                     

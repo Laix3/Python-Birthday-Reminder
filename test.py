@@ -26,13 +26,10 @@ objets = openFile('data.csv')
 config = openFile('config.csv')
 
 
-WSvalue = None
-            
-for i in config:
-    if i["name"] == 'startup':
-        WSvalue = i["value"]
-
-print(WSvalue)
+r = csv.reader(open('config.csv'))
+lines = list(r)
+print(lines)
+lines[1][1] = 1
 
 # date = []
 # for i in data:
