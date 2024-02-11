@@ -100,21 +100,7 @@ d3 : pour avoir la description de la commande [3]
                     print('a')
                 else:
                     print('abb')           
-            
-            if WSvalue == 1 :
-                startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-                dest_file = os.path.join(startup_folder, 'msg.py')
-                
-                if os.path.exists(dest_file):
-                    print("Démarrage automatique désactivé.")
-                    remove_Wstartup()
-                else:
-                    print("Démarrage automatique activé.")
-                    add_Wstartup(sys.argv[0])
                     
-            else:
-                print("nop")
-
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")
         
