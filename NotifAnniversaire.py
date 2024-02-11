@@ -16,6 +16,20 @@ data = openFile('data.csv')
    
 def deletePeople():
     print()
+    
+    
+
+def WStartup(src_file):
+    startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
+    
+    # Chemin de destination du fichier dans le dossier de démarrage
+    dest_file = os.path.join(startup_folder, os.path.basename(src_file))
+
+    # Copie le fichier source dans le dossier de démarrage
+    shutil.copy(src_file, dest_file)
+
+    print("Le programme a été ajouté au démarrage de Windows.")
+    logging.info("Le programme a été ajouté au démarrage de Windows.")
 
 
 def main():
@@ -58,7 +72,7 @@ d3 : pour avoir la description de la commande [3]
             choice2 = input("> ")
             
         elif choice == '3':
-            WStartup()
+            print()
 
         else:
             print("Choix invalide. Veuillez sélectionner une option valide.")
