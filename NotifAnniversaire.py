@@ -57,7 +57,7 @@ data = openFile('data.csv')
 
 def remove_person():
     print("Vous pouvez supprimer une personne directement dans le fichier data.csv (il faut une ligne vide à la fin)")
-    print("Veuillez entrer les informations de la personne que vous souhaitez supprimer")
+    print("[*] Veuillez entrer les informations de la personne que vous souhaitez supprimer")
     nom = input("> Nom : ")
 
     recherche1 = []
@@ -74,7 +74,7 @@ def remove_person():
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print(f"Suppression de {recherche1} réussie avec succès")
+        print(f"[*] Suppression de {recherche1} réussie avec succès")
         logging.info(f"Suppression de {recherche1} reussie avec succes")
 
 
@@ -94,7 +94,7 @@ def remove_person():
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print(f"Suppression de {recherche2} réussie avec succès")
+        print(f"[*] Suppression de {recherche2} réussie avec succès")
         logging.info(f"Suppression de {recherche2} reussie avec succes")
 
 
@@ -106,13 +106,13 @@ def WStartup(src_file):
     shortcut_path = os.path.join(startup_folder, shortcut_name)
     
     if os.path.exists(shortcut_path):
-        print("L'option Windows Startup est activée, voulez-vous la désactiver ?")
+        print("[*] L'option Windows Startup est activée, voulez-vous la désactiver ?")
         print('Y ou N')
         YorN = input("> ")
 
         if YorN.lower() == 'y':
             os.remove(shortcut_path)
-            print("L'option Windows Startup est désormais désactivée.")
+            print("[*] L'option Windows Startup est désormais désactivée.")
             logging.info("L'option Windows Startup est desormais désactivee.")
 
         elif YorN.lower() == 'n':
@@ -122,7 +122,7 @@ def WStartup(src_file):
             print("Choix invalide. Veuillez sélectionner une option valide.")
 
     else:
-        print("L'option Windows Startup est désactivée, voulez-vous l'activer ?")
+        print("[*] L'option Windows Startup est désactivée, voulez-vous l'activer ?")
         print('Y ou N')
         YorN = input("> ")
 
@@ -132,14 +132,14 @@ def WStartup(src_file):
                 Target=src_file,
                 Description="Script de démarrage pour la notification d'anniversaire"
             )
-            print("L'option Windows Startup est désormais activée.")
+            print("[*] L'option Windows Startup est désormais activée.")
             logging.info("L'option Windows Startup est desormais activee.")
 
         elif YorN.lower() == 'n':
             pass
 
         else:
-            print("Choix invalide. Veuillez sélectionner une option valide.")
+            print("[*] Choix invalide. Veuillez sélectionner une option valide.")
 
 
 
