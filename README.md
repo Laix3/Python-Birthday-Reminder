@@ -12,7 +12,7 @@
   <a href="#Support-Me">Support-Me</a>
 </p>
 
-<div style="text-align: center;">
+<div align="center">
     <img src="https://raw.githubusercontent.com/Laix3/Python-Birthday-Reminder/main/dancing-black.gif" alt="screenshot">
 </div>
 
