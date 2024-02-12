@@ -22,8 +22,8 @@
 
 * You can easily share birthday lists.
 * You can interact with the menu to:
-- Add a person to the list
-- Remove a person from the list
+    - Add a person to the list
+    - Remove a person from the list
 * Launch at Windows Startup.
 
 ## How To Use
