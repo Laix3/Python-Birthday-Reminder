@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#Download">Download</a> •
   <a href="#Key-features">Key Features</a> •
-  <a href="#Support Me">Support Me</a>
+  <a href="#Support-Me">Support-Me</a>
 </p>
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
@@ -30,7 +30,7 @@ You can [download](https://github.com/amitmerchant1990/electron-markdownify/rele
     - Enable or disable the option to launch at Windows startup.
 
 
-## Support Me
+## Support-Me
 
 <a href="https://www.buymeacoffee.com/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
