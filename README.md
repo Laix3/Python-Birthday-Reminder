@@ -60,5 +60,5 @@ This project was mainly created to improve my Python skills.
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
-## ideas to add
+## Ideas to add
 - Add real notification : from plyer import notification
