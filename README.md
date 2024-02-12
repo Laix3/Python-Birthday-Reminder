@@ -11,10 +11,9 @@
 
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#Support">Support</a>
+  <a href="#key-features">Download</a> •
+  <a href="#how-to-use">Key Features</a> •
+  <a href="#download">Support</a>
 </p>
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
