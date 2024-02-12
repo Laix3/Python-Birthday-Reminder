@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#Download">Download</a> •
   <a href="#Key-features">Key Features</a> •
-  <a href="#Support Me">Support</a>
+  <a href="#Support Me">Support Me</a>
 </p>
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
