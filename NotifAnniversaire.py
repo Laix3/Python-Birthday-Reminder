@@ -4,7 +4,7 @@ import os
 from CSV_by_Laix import *
 
 
-print("[*] Installation of missing modules")
+print("[*] Installing missing modules")
 
 if platform.system().startswith("Windows"):
     try:
