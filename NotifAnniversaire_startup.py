@@ -1,7 +1,7 @@
-import logging
 import ctypes
 import datetime
 import csv
+import logging
 
 
 logging.basicConfig(
@@ -26,6 +26,7 @@ def openFile(x):
 data = openFile('data.csv')
 
 date_actuelle = datetime.date.today().strftime("%d/%m")
+
 
 for x in data:
     date = x['date']

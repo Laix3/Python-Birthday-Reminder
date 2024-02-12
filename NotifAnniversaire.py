@@ -115,11 +115,11 @@ def remove_person():
 
 
 def WStartup(src_file):
-    # C:\Users\Laix\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-    startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-    shortcut_name = f'{src_file}.lnk'
-    shortcut_path = os.path.join(startup_folder, shortcut_name)
-    
+    startup_folder = winshell.startup()
+    shortcut_path = os.path.join(startup_folder, f'{src_file}.lnk')
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+
+
     if os.path.exists(shortcut_path):
         print("[*] L'option Windows Startup est activée, voulez-vous la désactiver ?")
         print('Y ou N')
@@ -142,11 +142,14 @@ def WStartup(src_file):
         YorN = input("> ")
 
         if YorN.lower() == 'y':
+            
             winshell.CreateShortcut(
-                Path=os.path.join(startup_folder, f'{src_file}.lnk'),
-                Target=src_file,
-                Description="Script de démarrage pour la notification d'anniversaire"
-            )
+                Path=shortcut_path, 
+                Target=os.path.abspath(src_file),
+                StartIn=script_directory,
+                Description="Script de démarrage pour les notifications d'anniversaire")
+            
+
             print("[*] L'option Windows Startup est désormais activée.")
             logging.info("L'option Windows Startup est desormais activee.")
 
@@ -165,7 +168,6 @@ Veuillez choisir une option parmi les suivantes :
     [1] Ajouter une personne
     [2] Supprimer une personne
     [3] ON/OFF Startup Windows
-    [4] Any problems with startup ?
         
 d3 : pour avoir la description de la commande [3]
 ''')
