@@ -32,8 +32,8 @@ This project was mainly created to improve my Python skills.
     - Enable or disable the option to launch at Windows startup.
 
 ## Supported platforms :
-1) Windows
-2) Linux Based Os
+    1) Windows
+    2) Linux Based Os
 
 ## Support-Me
 
