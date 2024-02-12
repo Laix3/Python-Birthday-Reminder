@@ -35,7 +35,7 @@ def add_to_csv(x,fileName):
         csvfile.write("\n")
         writer.writerow(x)
     print("Ajout de",x,"effectué")
-    logging.info(f"{x} écrit dans {fileName}")
+    logging.info(f"{x} ecrit dans {fileName}")
 
 
     
