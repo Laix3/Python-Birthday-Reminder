@@ -19,12 +19,12 @@
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 
 ## Key Features
-
 * You can easily share birthday lists.
+* Activate the program at Windows startup.
 * You can interact with the menu to:
     - Add a person to the list
     - Remove a person from the list
-* Launch at Windows Startup.
+    - Enable or disable the option to launch at Windows startup.
 
 ## How To Use
 
