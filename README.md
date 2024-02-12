@@ -12,7 +12,7 @@
   <a href="#Support-Me">Support-Me</a>
 </p>
 
-![screenshot](https://tenor.com/view/dancing-black-big-gif-20472579)
+![screenshot](https://raw.githubusercontent.com/Laix3/Python-Birthday-Reminder/main/dancing-black.gif)
 
 ## Description
 A small personal project completed in 4 days. I'm an absent-minded person, so I often forget birthdays, which is why I created this project. The advantage over Google Calendar is that it's easy to add people and share lists of people.
