@@ -19,7 +19,7 @@ A small personal project completed in 4 days. I'm an absent-minded person, so I 
 This project was mainly created to improve my Python skills.
 
 ## Download
-1. [Download Python](https://www.python.org/downloads/)
+1. [Download Python](https://www.python.org/downloads/ target="_blank")
 
 2. Clone the repository :
 
@@ -56,7 +56,7 @@ This project was mainly created to improve my Python skills.
 
 <p>Or</p> 
 
-<a href="https://www.patreon.com/">
+<a href="https://www.patreon.com/" target="_blank">
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
