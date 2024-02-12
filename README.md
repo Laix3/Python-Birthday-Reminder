@@ -32,7 +32,7 @@ This project was mainly created to improve my Python skills.
     ```
 4. Run Code :
    ```bash
-   python bd.py
+   py Birthday-Reminder.py
    ```
 5. Activate the startup option in the Birthday-Reminder.py interaction menu
 
