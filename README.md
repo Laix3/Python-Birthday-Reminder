@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  Python-Birthday-Reminder
+  🎂 Python-Birthday-Reminder 🔔
 </h1>
 
 <h4 align="center">A python script that reminds you of your loved ones' birthday.</h4>
@@ -20,13 +20,6 @@ This project was mainly created to improve my Python skills.
 
 ## Download
 1. [Download Python](https://www.python.org/downloads/)
-2. git clone 
-3. cd XXXX
-4. py Birthday-Reminder.py
-5. Enable startup option
-6. Enjoy!
-
-1. [Download Python](https://www.python.org/downloads/)
 
 2. Clone the repository:
 
@@ -35,12 +28,15 @@ This project was mainly created to improve my Python skills.
     ```
 3. Navigate To Project Directory
     ```bash
-    cd python-birthday-notifier
+    cd Python-Birthday-Reminder
     ```
 4. Run Code ( normally )
    ```bash
    python bd.py
    ```
+5. Activate the startup option in the Birthday-Reminder.py interaction menu
+
+6. Enjoy!
 
 ## Key-Features
 * You can easily share birthday lists.
