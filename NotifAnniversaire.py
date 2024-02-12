@@ -1,9 +1,10 @@
 import os
 import platform
+from pystyle import *
 
 from CSV_by_Laix import *
 
-print("[*] Installing missing modules")
+print("\033[91m" + "[*] Installing missing modules" + "\033[0m") 
 
 if platform.system().startswith("Windows"):
     try:
@@ -47,7 +48,6 @@ if platform.system().startswith("Windows"):
         import pystyle
     except ImportError:
         os.system("py -m pip install pystyle -q -q -q")
-
         from pystyle import *
 
 elif platform.system().startswith("Linux"):
@@ -68,7 +68,6 @@ data = openFile('data.csv')
 
 
 def remove_person():
-    print("Vous pouvez supprimer une personne directement dans le fichier data.csv (il faut une ligne vide à la fin)")
     print("[*] Veuillez entrer les informations de la personne que vous souhaitez supprimer")
     nom = input("> Nom : ")
 
@@ -159,15 +158,15 @@ def WStartup(src_file):
 
 
 def main():
-    print('''
+    print(Colorate.Horizontal(Colors.blue_to_purple, Box.DoubleCube('''
 Veuillez choisir une option parmi les suivantes :
     
-    [1] Ajouter une personne
-    [2] Supprimer une personne
-    [3] ON/OFF Startup Windows
+[1] Ajouter une personne
+[2] Supprimer une personne
+[3] ON/OFF Startup Windows
         
 d3 : pour avoir la description de la commande [3]
-''')
+''')))
     
     while True:
 
@@ -185,7 +184,7 @@ d3 : pour avoir la description de la commande [3]
             prenom = str(input("> Prenom : "))
             NPD.append(prenom)
             
-            date = str(input("> Date : "))
+            date = str(input("> Anniversaire : "))
             NPD.append(date)
             
             add_to_csv(NPD,'data.csv')

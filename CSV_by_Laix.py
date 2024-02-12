@@ -32,6 +32,7 @@ def openFile(x):
 def add_to_csv(x,fileName):
     with open(fileName, 'a', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
+        csvfile.write("\n")
         writer.writerow(x)
     print("Ajout de",x,"effectué")
     logging.info(f"{x} écrit dans {fileName}")
