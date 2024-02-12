@@ -194,7 +194,7 @@ d3 : pour avoir la description de la commande [3]
             remove_person()
             
         elif choice == '3':
-            WStartup('NotifAnniversaire_startup.py')
+            WStartup('Pyday-notification_startup.py')
                 
         else:
             print("\033[91m" + "[*] Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")

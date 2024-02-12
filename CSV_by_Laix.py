@@ -10,18 +10,18 @@ logging.basicConfig(
 
 
 def openFile(x):
-    ''' Permet d'ouvrir un fichier csv et de convertir en dictionnaire
+    ''' Opens a CSV file and converts it into a dictionary.
     in : example : file.csv
-    out : dictionnaire du csv    
+    out : dictionary of the CSV
     '''
     try:
         file = open(x, 'r', encoding='utf8')
 
     except FileNotFoundError:
-        print(f"Fichier {x} introuvable :/")
+        print(f"File {x} not found :/")
 
     else:
-        print("Fichier",x ,"trouvé !")
+        print("File", x, "found !")
         file = open(x, 'r', encoding='utf8')
         csv_en_dict = csv.DictReader(file, delimiter=',')
         objets = [{k.lower(): v.lower() for k, v in ligne.items()} for ligne in csv_en_dict]
