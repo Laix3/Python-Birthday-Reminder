@@ -49,14 +49,12 @@ if platform.system().startswith("Windows"):
         os.system("py -m pip install pystyle -q -q -q")
 
         from pystyle import *
-        
+
 elif platform.system().startswith("Linux"):
     print("[*] La version Linux n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
 
 elif platform.system().startswith("Darwin"):
     print("[*] La version MacOS n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
-
-
 
 
 logging.basicConfig(
