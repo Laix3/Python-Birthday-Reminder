@@ -25,15 +25,20 @@ This project was mainly created to improve my Python skills.
 
     ```bash
     git clone https://github.com/Laix3/Python-Birthday-Reminder
+    or
     ```
+    https://github.com/Laix3/Python-Birthday-Reminder/archive/refs/heads/main.zip
+    
 3. Navigate To Project Directory :
     ```bash
     cd Python-Birthday-Reminder
     ```
+
 4. Run Code :
    ```bash
    py Birthday-Reminder.py
    ```
+   
 5. Activate the startup option in the Birthday-Reminder.py interaction menu
 
 6. Enjoy !
