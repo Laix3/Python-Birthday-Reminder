@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#Download">Download</a> •
-  <a href="#Key-features">Key Features</a> •
+  <a href="#Key-features">Key-Features</a> •
   <a href="#Support-Me">Support-Me</a>
 </p>
 
@@ -19,9 +19,11 @@ A small personal project completed in 4 days. I'm an absent-minded person, so I 
 This project was mainly created to improve my Python skills.
 
 ## Download
-You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
+1. git clone https://github.com/machine1337/pycrypt
+2. cd pycrypt
+3. py pycrypt.py
 
-## Key Features
+## Key-Features
 * You can easily share birthday lists.
 * Activate the program at Windows startup.
 * You can interact with the menu to:
@@ -29,6 +31,9 @@ You can [download](https://github.com/amitmerchant1990/electron-markdownify/rele
     - Remove a person from the list
     - Enable or disable the option to launch at Windows startup.
 
+## Supported platforms :
+1) Windows
+2) Linux Based Os
 
 ## Support-Me
 
