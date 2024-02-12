@@ -25,9 +25,8 @@ This project was mainly created to improve my Python skills.
 
     ```bash
     git clone https://github.com/Laix3/Python-Birthday-Reminder
-    or
     ```
-    https://github.com/Laix3/Python-Birthday-Reminder/archive/refs/heads/main.zip
+    or click on the <a href="https://github.com/Laix3/Python-Birthday-Reminder/archive/refs/heads/main.zip" target="_blank">download file</a>
     
 3. Navigate To Project Directory :
     ```bash
@@ -38,7 +37,7 @@ This project was mainly created to improve my Python skills.
    ```bash
    py Birthday-Reminder.py
    ```
-   
+
 5. Activate the startup option in the Birthday-Reminder.py interaction menu
 
 6. Enjoy !
