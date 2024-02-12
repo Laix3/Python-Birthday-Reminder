@@ -1,8 +1,6 @@
 
 <h1 align="center">
   <br>
-  
-  <br>
   Pyday-notification
   <br>
 </h1>
