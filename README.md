@@ -60,8 +60,5 @@ This project was mainly created to improve my Python skills.
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
-## Future
-- from plyer import notification
-
-> **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.python.org/downloads/) or use `node` from the command prompt.
+## ideas to add
+- Add real notification : from plyer import notification
