@@ -21,22 +21,22 @@ This project was mainly created to improve my Python skills.
 ## Download
 1. [Download Python](https://www.python.org/downloads/)
 
-2. Clone the repository:
+2. Clone the repository :
 
     ```bash
     git clone https://github.com/Laix3/Python-Birthday-Reminder
     ```
-3. Navigate To Project Directory
+3. Navigate To Project Directory :
     ```bash
     cd Python-Birthday-Reminder
     ```
-4. Run Code ( normally )
+4. Run Code :
    ```bash
    python bd.py
    ```
 5. Activate the startup option in the Birthday-Reminder.py interaction menu
 
-6. Enjoy!
+6. Enjoy !
 
 ## Key-Features
 * You can easily share birthday lists.
