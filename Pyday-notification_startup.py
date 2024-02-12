@@ -20,8 +20,8 @@ for x in data:
     jour_mois = date.rsplit('/', 1)[0]
 
     if jour_mois == date_actuelle:
-        ctypes.windll.user32.MessageBoxW(0, f"Today is {x['prenom']} {x['nom']}'s birthday!", "Birthdays", 1)
-        logging.info(f"Today is {x['prenom']} {x['nom']}'s birthday")
+        ctypes.windll.user32.MessageBoxW(0, f"Today is {x['fname']} {x['name']}'s birthday!", "Birthdays", 1)
+        logging.info(f"Today is {x['fname']} {x['name']}'s birthday")
     
     else:
         quit()

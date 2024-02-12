@@ -51,10 +51,10 @@ if platform.system().startswith("Windows"):
         from pystyle import *
 
 elif platform.system().startswith("Linux"):
-    print("[*] La version Linux n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
+    print("[*] The Linux version is not yet available. You must run the program on Windows or MacOS.")
 
 elif platform.system().startswith("Darwin"):
-    print("[*] La version MacOS n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
+    print("[*] The MacOS version is not yet available. You must run the program on Windows or MacOS.")
 
 
 logging.basicConfig(
@@ -68,45 +68,45 @@ data = openFile('data.csv')
 
 
 def remove_person():
-    print("\033[92m" + "[*] Veuillez entrer les informations de la personne que vous souhaitez supprimer" + "\033[97m")
-    nom = input("> Nom : ")
+    print("\033[92m" + "[*] Please enter the information of the person you want to remove" + "\033[97m")
+    nom = input("> Name : ")
 
     recherche1 = []
     for i in data:
-        if i["nom"] == nom.lower():
+        if i["name"] == nom.lower():
             recherche1.append(i)
     
     if len(recherche1) <= 1:
         data_restant = [personne for personne in data if personne not in recherche1]
 
         with open('data.csv', 'w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['nom', 'prenom', 'date']
+            fieldnames = ['name', 'fname', 'date']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=',')
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print("\033[93m" + f"[*] Suppression de {recherche1} réussie avec succès" + "\033[97m")
-        logging.info(f"Suppression de {recherche1} reussie avec succes")
+        print("\033[93m" + f"[*] Successfully removed {recherche1}" + "\033[97m")
+        logging.info(f"Successfully removed {recherche1}")
 
 
     elif len(recherche1) > 1:
-        prenom = input("> Prenom : ")
+        prenom = input("> First Name : ")
 
         recherche2 = []
         for i in recherche1:
-            if i["prenom"] == prenom.lower():
+            if i["fname"] == prenom.lower():
                 recherche2.append(i)
 
         data_restant = [personne for personne in data if personne not in recherche2]
 
         with open('data.csv', 'w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['nom', 'prenom', 'date']
+            fieldnames = ['name', 'fname', 'date']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=',')
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print(f"[*] Suppression de {recherche2} réussie avec succès")
-        logging.info(f"Suppression de {recherche2} reussie avec succes")
+        print(f"[*] Successfully removed {recherche2}")
+        logging.info(f"Successfully removed {recherche2}")
 
 
 
@@ -117,23 +117,23 @@ def WStartup(src_file):
 
 
     if os.path.exists(shortcut_path):
-        print("[*] L'option Windows Startup est \033[92mactivée\033[97m, voulez-vous la \033[91mdésactiver\033[97m ?")
+        print("[*] Windows Startup option is \033[92menabled\033[97m, do you want to \033[91mdisable\033[97m it?")
         print('\033[91mY\033[97m or \033[92mN\033[97m')
         YorN = input("> ")
 
         if YorN.lower() == 'y':
             os.remove(shortcut_path)
-            print("[*] L'option Windows Startup est désormais \033[91mdésactivée.\033[97m")
-            logging.info("L'option Windows Startup est desormais désactivee.")
+            print("[*] Windows Startup option is now \033[91mdisabled.\033[97m")
+            logging.info("Windows Startup option is now disabled.")
 
         elif YorN.lower() == 'n':
             pass
 
         else:
-            print("\033[91m" + "Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")
+            print("\033[91m" + "Invalid choice. Please select a valid option." + "\033[97m")
 
     else:
-        print("[*] L'option Windows Startup est \033[91mdésactivée\033[97m, voulez-vous \033[92ml'activer\033[97m ?")
+        print("[*] Windows Startup option is \033[91mdisabled\033[97m, do you want to \033[92menable\033[97m it?")
         print('\033[92mY\033[97m or \033[91mN\033[97m')
         YorN = input("> ")
 
@@ -143,29 +143,29 @@ def WStartup(src_file):
                 Path=shortcut_path, 
                 Target=os.path.abspath(src_file),
                 StartIn=script_directory,
-                Description="Script de démarrage pour les notifications d'anniversaire")
+                Description="Script for birthday notification at startup")
             
 
-            print("[*] L'option Windows Startup est désormais \033[92mactivée.\033[97m")
-            logging.info("L'option Windows Startup est desormais activee.")
+            print("[*] Windows Startup option is now \033[92menabled.\033[97m")
+            logging.info("Windows Startup option is now enabled.")
 
         elif YorN.lower() == 'n':
             pass
 
         else:
-            print("\033[91m" + "[*] Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")
+            print("\033[91m" + "Invalid choice. Please select a valid option." + "\033[97m")
 
 
 
 def main():
     print(Colorate.Horizontal(Colors.blue_to_purple, Box.DoubleCube('''
-Veuillez choisir une option parmi les suivantes :
-    
-[1] Ajouter une personne
-[2] Supprimer une personne
-[3] ON/OFF Startup Windows
+Please choose an option from the following:
+
+[1] Add a person
+[2] Delete a person
+[3] ON/OFF Windows Startup
         
-d3 : pour avoir la description de la commande [3]
+d3: for the description of command [3]
 ''')))
     
     while True:
@@ -173,18 +173,18 @@ d3 : pour avoir la description de la commande [3]
         choice = input("> ")
         
         if choice.lower() == 'd3':
-            print("Permets que le script se lance au démargé de l'ordinateur pour vérifier si c'est l'anniversaire d'une personne")
+            print("Allows the script to run on computer startup to check if it's someone's birthday")
             
         elif choice == '1':
             NPD = []
             
-            nom = str(input("> Nom : "))
+            nom = str(input("> Name : "))
             NPD.append(nom)
             
-            prenom = str(input("> Prenom : "))
+            prenom = str(input("> First Name : "))
             NPD.append(prenom)
             
-            date = str(input("> Anniversaire : "))
+            date = str(input("> Birthday : "))
             NPD.append(date)
             
             add_to_csv(NPD,'data.csv')
@@ -197,6 +197,6 @@ d3 : pour avoir la description de la commande [3]
             WStartup('Pyday-notification_startup.py')
                 
         else:
-            print("\033[91m" + "[*] Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")
+            print("\033[91m" + "[*] Invalid choice. Please select a valid option." + "\033[97m")
         
 main()

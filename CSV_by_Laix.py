@@ -34,15 +34,15 @@ def add_to_csv(x,fileName):
         writer = csv.writer(csvfile)
         csvfile.write("\n")
         writer.writerow(x)
-    print("Ajout de",x,"effectué")
-    logging.info(f"{x} ecrit dans {fileName}")
+    print("Addition of", x, "completed")
+    logging.info(f"{x} written in {fileName}")
 
 
     
 def listCleanner(xList):
-    ''' Permet d'enlever les '' d'un liste
+    ''' Removes empty strings from a list.
     in : example : file.csv
-    out : dictionnaire du csv    
+    out : dictionary of the csv
     '''
     # verifie si c'est une liste
     if isinstance(xList, list):
@@ -51,9 +51,9 @@ def listCleanner(xList):
                 xList.remove(i)
             else:
                 pass
-        logging.info("Fin du nettoyage de la liste :", xList)
+        logging.info("List cleaning complete :", xList)
 
         return xList
     
     else:
-        return "Cleaner : Vous n'avez pas sélectionné une liste"
+        return "Cleaner: You did not select a list"
