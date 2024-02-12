@@ -10,46 +10,45 @@ if platform.system().startswith("Windows"):
     try:
         import csv
     except ImportError:
-        os.system("python -m pip install csv -q -q -q")
+        os.system("py -m pip install csv -q -q -q")
         import csv
 
     try:
         import ctypes
     except ImportError:
-        os.system("python -m pip install ctypes -q -q -q")
+        os.system("py -m pip install ctypes -q -q -q")
         import ctypes
 
     try:
         import datetime
     except ImportError:
-        os.system("python -m pip install datetime -q -q -q")
+        os.system("py -m pip install datetime -q -q -q")
         import datetime
 
     try:
         import winshell
     except ImportError:
-        os.system("python -m pip install winshell -q -q -q")
-        os.system("python -m pip install pywin32 -q -q -q")
+        os.system("py -m pip install winshell -q -q -q")
+        os.system("py -m pip install pywin32 -q -q -q")
         import winshell
 
     try:
         import logging
     except ImportError:
-        os.system("python -m pip install logging -q -q -q")
+        os.system("py -m pip install logging -q -q -q")
         import logging
 
     try:
         import colorama
-        from colorama import Fore, Back, Style
     except ImportError:
-        os.system("python -m pip install colorama -q -q -q")
-        import colorama
+        os.system("py -m pip install colorama -q -q -q")
         from colorama import Fore, Back, Style
 
     try:
-        from pystyle import *
-    except:
-        os.system("python -m pip install pystyle -q -q -q")
+        import pystyle
+    except ImportError:
+        os.system("py -m pip install pystyle -q -q -q")
+
         from pystyle import *
 elif platform.system().startswith("Linux"):
     print("[*] La version Linux n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")

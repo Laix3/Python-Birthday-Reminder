@@ -1,27 +1,14 @@
 import ctypes
 import datetime
-import csv
 import logging
 
+from CSV_by_Laix import openFile
 
 logging.basicConfig(
     filename='logs.log',
     level=logging.DEBUG,
     format='%(levelname)s - %(asctime)s - %(message)s'
 )
-
-def openFile(x):
-    try:
-        file = open(x, 'r', encoding='utf8')
-
-    except FileNotFoundError:
-        print(f"Fichier {x} introuvable :/")
-
-    else:
-        file = open(x, 'r', encoding='utf8')
-        csv_en_dict = csv.DictReader(file, delimiter=',')
-        objets = [{k.lower(): v.lower() for k, v in ligne.items()} for ligne in csv_en_dict]
-    return objets
 
 data = openFile('data.csv')
 
