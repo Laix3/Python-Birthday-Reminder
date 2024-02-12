@@ -12,7 +12,9 @@
   <a href="#Support-Me">Support-Me</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/Laix3/Python-Birthday-Reminder/main/dancing-black.gif)
+<div style="text-align: center;">
+    <img src="https://raw.githubusercontent.com/Laix3/Python-Birthday-Reminder/main/dancing-black.gif" alt="screenshot">
+</div>
 
 ## Description
 A small personal project completed in 4 days. I'm an absent-minded person, so I often forget birthdays, which is why I created this project. The advantage over Google Calendar is that it's easy to add people and share lists of people.
