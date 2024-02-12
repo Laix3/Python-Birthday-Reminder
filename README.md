@@ -19,7 +19,7 @@ A small personal project completed in 4 days. I'm an absent-minded person, so I 
 This project was mainly created to improve my Python skills.
 
 ## Download
-1. [Download Python](https://www.python.org/downloads/ target="_blank")
+1. <a href="https://www.python.org/downloads/" target="_blank">Download Python</a>
 
 2. Clone the repository :
 
