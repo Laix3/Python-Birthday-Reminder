@@ -118,7 +118,7 @@ def WStartup(src_file):
 
     if os.path.exists(shortcut_path):
         print("[*] L'option Windows Startup est \033[92mactivée\033[97m, voulez-vous la \033[91mdésactiver\033[97m ?")
-        print('\033[91mY\033[97m ou \033[92mN\033[97m')
+        print('\033[91mY\033[97m or \033[92mN\033[97m')
         YorN = input("> ")
 
         if YorN.lower() == 'y':
@@ -134,7 +134,7 @@ def WStartup(src_file):
 
     else:
         print("[*] L'option Windows Startup est \033[91mdésactivée\033[97m, voulez-vous \033[92ml'activer\033[97m ?")
-        print('\033[92mY\033[97m ou \033[91mN\033[97m')
+        print('\033[92mY\033[97m or \033[91mN\033[97m')
         YorN = input("> ")
 
         if YorN.lower() == 'y':
