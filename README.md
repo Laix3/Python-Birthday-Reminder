@@ -1,18 +1,22 @@
 
 <h1 align="center">
-  Birthday-Reminder
+  Python-Birthday-Reminder
 </h1>
 
 <h4 align="center">A python script that reminds you of your loved ones' birthday.</h4>
 
 
 <p align="center">
-  <a href="#key-features">Download</a> •
-  <a href="#how-to-use">Key Features</a> •
-  <a href="#download">Support</a>
+  <a href="#download">Download</a> •
+  <a href="#key-features">Key Features</a> •
+  <a href="#support">Support</a>
 </p>
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+
+## Description
+A small personal project completed in 4 days. I'm an absent-minded person, so I often forget birthdays, which is why I created this project. The advantage over Google Calendar is that it's easy to add people and share lists of people.
+This project was mainly created to improve my Python skills and be able to show off in front of my friends.
 
 ## Download
 You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
