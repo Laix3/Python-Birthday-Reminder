@@ -21,6 +21,7 @@ for x in data:
 
     if jour_mois == date_actuelle:
         ctypes.windll.user32.MessageBoxW(0, f"C'est l'anniversaire de {x['prenom']} {x['nom']} aujourd'hui", "Anniversaires", 1)
+        logging.info(f"C'est l'anniversaire de {x['prenom']} {x['nom']} aujourd'hui")
     
     else:
         quit()
