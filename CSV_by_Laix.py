@@ -18,7 +18,7 @@ def openFile(x):
         file = open(x, 'r', encoding='utf8')
 
     except FileNotFoundError:
-        print("Fichier introuvable :/")
+        print(f"Fichier {x} introuvable :/")
 
     else:
         print("Fichier",x ,"trouvé !")
