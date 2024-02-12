@@ -1,3 +1,7 @@
+### TUTO
+Quand vous lancez python-3.12.2.exe cochez "Add to PATH" et "Lancer en tant qu'administrateur"
+
+
 # NotifAnniversaire
 
 installe les modules python automatiquement : https://github.com/machine1337/pycrypt/tree/main

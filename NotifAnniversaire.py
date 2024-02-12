@@ -1,11 +1,18 @@
-import logging
-import os
-import winshell
 import platform
+import os
 
 from CSV_by_Laix import *
 
+
+print("[*] Installation of missing modules")
+
 if platform.system().startswith("Windows"):
+    try:
+        import csv
+    except ImportError:
+        os.system("python -m pip install csv -q -q -q")
+        import csv
+
     try:
         import ctypes
     except ImportError:
@@ -22,6 +29,7 @@ if platform.system().startswith("Windows"):
         import winshell
     except ImportError:
         os.system("python -m pip install winshell -q -q -q")
+        os.system("python -m pip install pywin32 -q -q -q")
         import winshell
 
     try:
@@ -43,6 +51,12 @@ if platform.system().startswith("Windows"):
     except:
         os.system("python -m pip install pystyle -q -q -q")
         from pystyle import *
+elif platform.system().startswith("Linux"):
+    print("[*] La version Linux n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
+
+elif platform.system().startswith("Darwin"):
+    print("[*] La version MacOS n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
+
 
 
 
@@ -151,6 +165,7 @@ Veuillez choisir une option parmi les suivantes :
     [1] Ajouter une personne
     [2] Supprimer une personne
     [3] ON/OFF Startup Windows
+    [4] Any problems with startup ?
         
 d3 : pour avoir la description de la commande [3]
 ''')
