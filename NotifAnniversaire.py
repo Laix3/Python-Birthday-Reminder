@@ -4,7 +4,7 @@ from pystyle import *
 
 from CSV_by_Laix import *
 
-print("\033[91m" + "[*] Installing missing modules" + "\033[0m") 
+print("\033[91m" + "[*] Installing missing modules" + "\033[97m") 
 
 if platform.system().startswith("Windows"):
     try:
@@ -68,7 +68,7 @@ data = openFile('data.csv')
 
 
 def remove_person():
-    print("[*] Veuillez entrer les informations de la personne que vous souhaitez supprimer")
+    print("\033[92m" + "[*] Veuillez entrer les informations de la personne que vous souhaitez supprimer" + "\033[97m")
     nom = input("> Nom : ")
 
     recherche1 = []
@@ -85,7 +85,7 @@ def remove_person():
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print(f"[*] Suppression de {recherche1} réussie avec succès")
+        print("\033[93m" + f"[*] Suppression de {recherche1} réussie avec succès" + "\033[97m")
         logging.info(f"Suppression de {recherche1} reussie avec succes")
 
 
@@ -117,24 +117,24 @@ def WStartup(src_file):
 
 
     if os.path.exists(shortcut_path):
-        print("[*] L'option Windows Startup est activée, voulez-vous la désactiver ?")
-        print('Y ou N')
+        print("[*] L'option Windows Startup est \033[92mactivée\033[97m, voulez-vous la \033[91mdésactiver\033[97m ?")
+        print('\033[91mY\033[97m ou \033[92mN\033[97m')
         YorN = input("> ")
 
         if YorN.lower() == 'y':
             os.remove(shortcut_path)
-            print("[*] L'option Windows Startup est désormais désactivée.")
+            print("[*] L'option Windows Startup est désormais \033[91mdésactivée.\033[97m")
             logging.info("L'option Windows Startup est desormais désactivee.")
 
         elif YorN.lower() == 'n':
             pass
 
         else:
-            print("Choix invalide. Veuillez sélectionner une option valide.")
+            print("\033[91m" + "Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")
 
     else:
-        print("[*] L'option Windows Startup est désactivée, voulez-vous l'activer ?")
-        print('Y ou N')
+        print("[*] L'option Windows Startup est \033[91mdésactivée\033[97m, voulez-vous \033[92ml'activer\033[97m ?")
+        print('\033[92mY\033[97m ou \033[91mN\033[97m')
         YorN = input("> ")
 
         if YorN.lower() == 'y':
@@ -146,14 +146,14 @@ def WStartup(src_file):
                 Description="Script de démarrage pour les notifications d'anniversaire")
             
 
-            print("[*] L'option Windows Startup est désormais activée.")
+            print("[*] L'option Windows Startup est désormais \033[92mactivée.\033[97m")
             logging.info("L'option Windows Startup est desormais activee.")
 
         elif YorN.lower() == 'n':
             pass
 
         else:
-            print("[*] Choix invalide. Veuillez sélectionner une option valide.")
+            print("\033[91m" + "[*] Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")
 
 
 
@@ -197,6 +197,6 @@ d3 : pour avoir la description de la commande [3]
             WStartup('NotifAnniversaire_startup.py')
                 
         else:
-            print("Choix invalide. Veuillez sélectionner une option valide.")
+            print("\033[91m" + "[*] Choix invalide. Veuillez sélectionner une option valide." + "\033[97m")
         
 main()

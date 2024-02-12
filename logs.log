@@ -6,3 +6,11 @@ INFO - 2024-02-12 21:16:16,434 - ['a', 'b', 'c'] écrit dans data.csv
 INFO - 2024-02-12 21:16:35,868 - ['a', 'b', 'c'] écrit dans data.csv
 INFO - 2024-02-12 21:17:10,686 - ['a', 'b', 'c'] écrit dans data.csv
 INFO - 2024-02-12 21:17:41,140 - ['a', 'b', 'c'] écrit dans data.csv
+INFO - 2024-02-12 21:21:39,767 - Suppression de [{'nom': 'lebec', 'prenom': 'bob', 'date': '31/02/2010'}] reussie avec succes
+INFO - 2024-02-12 21:23:47,460 - Suppression de [{'nom': 'bibou', 'prenom': 'bob', 'date': '12/34/3033'}] reussie avec succes
+INFO - 2024-02-12 21:25:11,410 - Suppression de [{'nom': 'lebec', 'prenom': 'bob', 'date': '31/02/2010'}] reussie avec succes
+INFO - 2024-02-12 21:27:03,369 - Suppression de [] reussie avec succes
+INFO - 2024-02-12 21:32:08,221 - L'option Windows Startup est desormais désactivee.
+INFO - 2024-02-12 21:32:14,115 - L'option Windows Startup est desormais activee.
+INFO - 2024-02-12 21:34:00,878 - L'option Windows Startup est desormais désactivee.
+INFO - 2024-02-12 21:34:31,358 - L'option Windows Startup est desormais activee.
