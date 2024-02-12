@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  Pyday-notification
+  Birthday-Reminder
 </h1>
 
 <h4 align="center">A python script that reminds you of your loved ones' birthday.</h4>
@@ -24,6 +24,9 @@ You can [download](https://github.com/amitmerchant1990/electron-markdownify/rele
     - Add a person to the list
     - Remove a person from the list
     - Enable or disable the option to launch at Windows startup.
+
+## Future
+- from plyer import notification
 
 
 ```bash
