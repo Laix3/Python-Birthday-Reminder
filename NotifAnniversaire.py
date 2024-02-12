@@ -1,8 +1,7 @@
-import platform
 import os
+import platform
 
 from CSV_by_Laix import *
-
 
 print("[*] Installing missing modules")
 
@@ -50,6 +49,7 @@ if platform.system().startswith("Windows"):
         os.system("py -m pip install pystyle -q -q -q")
 
         from pystyle import *
+        
 elif platform.system().startswith("Linux"):
     print("[*] La version Linux n'est pas encore disponible. Vous devez lancer le programme sur Windows ou MacOS.")
 
