@@ -20,9 +20,11 @@ This project was mainly created to improve my Python skills.
 
 ## Download
 1. [Download Python](https://www.python.org/downloads/)
-2. git clone https://github.com/machine1337/pycrypt
-3. cd pycrypt
-4. py pycrypt.py
+2. git clone https://github.com/Laix3/NotifAnniversaire
+3. cd XXXX
+4. py Birthday-Reminder.py
+5. Enable startup option
+6. Enjoy!
 
 ## Key-Features
 * You can easily share birthday lists.
