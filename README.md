@@ -12,7 +12,7 @@
   <a href="#Support-Me">Support-Me</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+![screenshot](https://raw.githubusercontent.com/ctron-markdwnify/master/app/img/markdownify.gif)
 
 ## Description
 A small personal project completed in 4 days. I'm an absent-minded person, so I often forget birthdays, which is why I created this project. The advantage over Google Calendar is that it's easy to add people and share lists of people.
