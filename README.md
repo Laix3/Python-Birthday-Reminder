@@ -16,7 +16,7 @@
 
 ## Description
 A small personal project completed in 4 days. I'm an absent-minded person, so I often forget birthdays, which is why I created this project. The advantage over Google Calendar is that it's easy to add people and share lists of people.
-This project was mainly created to improve my Python skills and be able to show off in front of my friends.
+This project was mainly created to improve my Python skills.
 
 ## Download
 You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
