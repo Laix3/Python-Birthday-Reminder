@@ -63,19 +63,5 @@ This project was mainly created to improve my Python skills.
 ## Future
 - from plyer import notification
 
-```bash
-# Clone this repository
-$ git clone https://github.com/amitmerchant1990/electron-markdownify
-
-# Go into the repository
-$ cd electron-markdownify
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-```
-
 > **Note**
 > If you're using Linux Bash for Windows, [see this guide](https://www.python.org/downloads/) or use `node` from the command prompt.
