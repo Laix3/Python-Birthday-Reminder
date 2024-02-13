@@ -37,7 +37,7 @@ This project was mainly created to improve my Python skills.
 
 4. Run Code :
    ```bash
-   py Birthday-Reminder.py
+   python Birthday-Reminder.py
    ```
    or click on "start.bat"
 
