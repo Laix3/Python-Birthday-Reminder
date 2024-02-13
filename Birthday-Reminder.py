@@ -5,7 +5,7 @@ from pystyle import *
 from CSV_by_Laix import *
 
 
-print("\033[91m" + "[*] Installing missing modules" + "\033[97m") 
+print("\033[91m" + "[*] Installing missing modules..." + "\033[97m") 
 
 try:
     import csv
