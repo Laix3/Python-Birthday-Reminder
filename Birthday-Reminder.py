@@ -105,6 +105,7 @@ def remove_person():
 
 
 def WStartup(src_file):
+
     if platform.system().startswith("Windows"):
 
         startup_folder = winshell.startup()
@@ -156,6 +157,9 @@ def WStartup(src_file):
 
     elif platform.system().startswith("Darwin"):
         print("not avaible on MacOs")
+    
+    else:
+        raise OSError("Unsupported operating system : " + platform.system())
 
 
 def main():
