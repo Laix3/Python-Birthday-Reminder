@@ -13,7 +13,7 @@
 </p>
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/Laix3/Python-Birthday-Reminder/main/dancing-black.gif" alt="screenshot">
+    <img src="https://raw.githubusercontent.com/Laix3/Python-Birthday-Reminder/main/dancing.gif" alt="screenshot">
 </div>
 
 ## Description
