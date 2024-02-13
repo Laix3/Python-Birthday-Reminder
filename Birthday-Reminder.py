@@ -62,7 +62,7 @@ data = openFile('data.csv')
 
 
 def remove_person():
-    print("\033[92m" + "[*] Please enter the information of the person you want to remove" + "\033[97m")
+    print("\033[92m" + "[+] Please enter the information of the person you want to remove" + "\033[97m")
     nom = input("> Name : ")
 
     recherche1 = []
@@ -79,7 +79,7 @@ def remove_person():
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print("\033[93m" + f"[*] Successfully removed {recherche1}" + "\033[97m")
+        print("\033[93m" + f"[-] Successfully removed {recherche1}" + "\033[97m")
         logging.info(f"Successfully removed {recherche1}")
 
 
@@ -99,7 +99,7 @@ def remove_person():
             writer.writeheader()
             writer.writerows(data_restant)
 
-        print(f"[*] Successfully removed {recherche2}")
+        print(f"[-] Successfully removed {recherche2}")
         logging.info(f"Successfully removed {recherche2}")
 
 
