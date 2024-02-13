@@ -159,7 +159,7 @@ def WStartup(src_file):
         print("not avaible on MacOs")
     
     else:
-        raise OSError("Unsupported operating system : " + platform.system())
+        raise OSError("\033[91mUnsupported operating system: " + platform.system() + "\033[97m")
 
 
 def main():
