@@ -54,7 +54,7 @@ This project was mainly created to improve my Python skills.
 
 ## Start-up Supported :
     1) ✅ Windows
-    2) ❌ Linux Based Os
+    2) ❌ Linux
     3) ❌ MacOS
 
 ## Support-Me
