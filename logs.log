@@ -1,0 +1,9 @@
+INFO - 2024-02-13 20:26:44,133 - Windows Startup option is now enabled.
+INFO - 2024-02-13 21:05:57,889 - ['a', 'b', 'c'] written in data.csv
+INFO - 2024-02-13 21:06:19,438 - Successfully removed [{'name': 'badouli', 'fname': 'aida', 'date': '16/10/2007'}]
+INFO - 2024-02-13 21:06:57,487 - Windows Startup option is now disabled.
+INFO - 2024-02-13 21:07:03,715 - Windows Startup option is now enabled.
+INFO - 2024-02-13 21:09:56,293 - Today is a a's birthday
+INFO - 2024-02-13 21:12:01,628 - Today is aida badouli's birthday
+INFO - 2024-02-13 21:17:24,812 - Today is aida badouli's birthday
+INFO - 2024-02-13 21:26:28,164 - Today is aida badouli's birthday
