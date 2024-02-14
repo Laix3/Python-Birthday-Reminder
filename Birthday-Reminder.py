@@ -163,6 +163,7 @@ def WStartup(src_file):
 
 
 def main():
+    os.system("clear")
     print(Colorate.Horizontal(Colors.blue_to_purple, Box.DoubleCube('''
 Please choose an option from the following:
 

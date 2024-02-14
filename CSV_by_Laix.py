@@ -18,10 +18,10 @@ def openFile(x):
         file = open(x, 'r', encoding='utf8')
 
     except FileNotFoundError:
-        print(f"File {x} not found :/")
+        print(f"[*] File {x} not found :/")
 
     else:
-        print("File", x, "found !")
+        print("[*] File", x, "found !")
         file = open(x, 'r', encoding='utf8')
         csv_en_dict = csv.DictReader(file, delimiter=',')
         objets = [{k.lower(): v.lower() for k, v in ligne.items()} for ligne in csv_en_dict]
@@ -34,7 +34,7 @@ def add_to_csv(x,fileName):
         writer = csv.writer(csvfile)
         csvfile.write("\n")
         writer.writerow(x)
-    print("Addition of", x, "completed")
+    print("[+] Addition of", x, "completed")
     logging.info(f"{x} written in {fileName}")
 
 
@@ -51,9 +51,9 @@ def listCleanner(xList):
                 xList.remove(i)
             else:
                 pass
-        logging.info("List cleaning complete :", xList)
+        logging.info("[*] List cleaning complete :", xList)
 
         return xList
     
     else:
-        return "Cleaner: You did not select a list"
+        return "[*] Cleaner: You did not select a list"
