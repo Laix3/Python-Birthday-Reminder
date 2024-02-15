@@ -1,8 +1,8 @@
 import ctypes
 import datetime
 import logging
+import csv
 
-from CSV_by_Laix import openFile
 
 logging.basicConfig(
     filename='logs.log',
@@ -10,26 +10,32 @@ logging.basicConfig(
     format='%(levelname)s - %(asctime)s - %(message)s'
 )
 
+
+def openFile(x):
+    try:
+        file = open(x, 'r', encoding='utf8')
+
+    except FileNotFoundError:
+        print(f"[*] File {x} not found :/")
+
+    else:
+        file = open(x, 'r', encoding='utf8')
+        csv_en_dict = csv.DictReader(file, delimiter=',')
+        objets = [{k.lower(): v.lower() for k, v in ligne.items()} for ligne in csv_en_dict]
+    return objets
+
+
 data = openFile('data.csv')
 
 date_actuelle = datetime.date.today().strftime("%d/%m")
 
-date = [i['date'] for i in data]
-jour_mois = []
+for i in data:
 
-for i in date:
-    jour_mois.append(i.rsplit('/', 1)[0])
-    
-# 1. parcourir les dates et supprimer l'anne
-# 2. faire un dictionnaire qui contient nom+prenom:date
-    
-    
-print(jour_mois)
-for x in data:
-    
-    
-    if jour_mois == date_actuelle:
-        ctypes.windll.user32.MessageBoxW(0, f"Today is {x['fname']} {x['name']}'s birthday !", "Birthdays", 1)
-        logging.info(f"Today is {x['fname']} {x['name']}'s birthday")
+    jour_mois = (i['date'].rsplit('/', 1)[0])
 
-    quit()
+    if jour_mois == str(date_actuelle):
+        ctypes.windll.user32.MessageBoxW(0, f"Today is {i['fname']} {i['name']}'s birthday !", "Birthdays", 1)
+        logging.info(f"Today is {i['fname']} {i['name']}'s birthday")
+        
+    else:
+        pass
