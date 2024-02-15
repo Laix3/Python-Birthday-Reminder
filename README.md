@@ -56,7 +56,6 @@ This project was mainly created to improve my Python skills.
     3) ❌ MacOS
 
 -----
-
 ### <p align="center">🎯 Levels 🎯</p>
 
 <p align="center"><strong><i>This section shows the "levels" of this project, from 0/5 ⚪ to 5/5 ⚫!</i></strong</p>
@@ -67,7 +66,6 @@ This project was mainly created to improve my Python skills.
 * Complexity: 🟢
 <!-- * Service: 🔵 -->
 <br><br>
-
 -----
 
 ## Support-Me ( not working now :\ )
