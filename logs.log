@@ -1,6 +1,0 @@
-INFO - 2024-02-16 10:00:17,744 - ['AAA', 'BBB', 'VVV'] written in data.csv
-INFO - 2024-02-16 10:02:10,733 - ['aa', 'bb', '2é'] written in data.csv
-INFO - 2024-02-16 10:02:30,781 - Successfully removed []
-INFO - 2024-02-16 10:02:39,411 - Windows Startup option is now disabled.
-INFO - 2024-02-16 10:02:43,399 - Windows Startup option is now enabled.
-INFO - 2024-02-16 10:03:29,622 - Today is vv aaa's birthday
