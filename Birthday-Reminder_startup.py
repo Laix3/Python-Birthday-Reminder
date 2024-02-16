@@ -38,7 +38,7 @@ for i in data:
     if jour_mois == str(date_actuelle):
         
         notification.notify(
-        app_icon = "cake.ico",
+        app_icon = "Images/cake.ico",
         title = "Birthdays",
         message = f"Today is {i['fname']} {i['name']}'s birthday !",
         timeout = 20
@@ -54,7 +54,7 @@ for i in data:
         pass
 
 notification.notify(
-app_icon = "no-cake.ico",
+app_icon = "Images/no-cake.ico",
 title = "No Birthdays",
 message = "No birthday today",
 timeout = 10
