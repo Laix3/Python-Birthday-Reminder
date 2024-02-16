@@ -78,7 +78,3 @@ This project was mainly created to improve my Python skills.
 <!-- * Service: 🔵 -->
 <br><br>
 -----
-
-
-## Ideas to add
-- Add desktop notification (not pop up) : from plyer import notification | https://stackoverflow.com/questions/12575708/notification-using-python
