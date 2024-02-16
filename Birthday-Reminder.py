@@ -207,7 +207,7 @@ d3: for the description of command [3]
             remove_person()
             
         elif choice == '3':
-            WStartup('Birthday-Reminder_startup.py')
+            WStartup('Birthday-Reminder_startup.pyw')
                 
         else:
             print("\033[91m" + "[*] Invalid choice. Please select a valid option." + "\033[97m")
