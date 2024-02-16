@@ -49,6 +49,13 @@ try:
 except ImportError:
     os.system("py -m pip install pystyle -q -q -q")
     from pystyle import *
+    
+try:
+    import plyer
+except ImportError:
+    os.system("py -m pip install plyer -q -q -q")
+    
+    
 
 
 logging.basicConfig(

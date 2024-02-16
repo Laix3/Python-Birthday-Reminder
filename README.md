@@ -1,4 +1,4 @@
-<h1 align="center">Python-Birthday-Reminder 🔔</h1>
+<h1 align="center">🎂 Python-Birthday-Reminder 🔔</h1>
 
 <h4 align="center">A python script that reminds you of your loved ones' birthday.</h4>
 
