@@ -121,7 +121,7 @@ def WStartup(src_file):
 
 
         if os.path.exists(shortcut_path):
-            print("[*] Windows Startup option is \033[92menabled\033[97m, do you want to \033[91mdisable\033[97m it?")
+            print("[*] Windows Startup option is \033[92menabled\033[97m, do you want to \033[91mdisable\033[97m it ?")
             print('\033[91mY\033[97m or \033[92mN\033[97m')
             YorN = input("> ")
 
@@ -137,7 +137,7 @@ def WStartup(src_file):
                 print("\033[91m" + "Invalid choice. Please select a valid option." + "\033[97m")
 
         else:
-            print("[*] Windows Startup option is \033[91mdisabled\033[97m, do you want to \033[92menable\033[97m it?")
+            print("[*] Windows Startup option is \033[91mdisabled\033[97m, do you want to \033[92menable\033[97m it ?")
             print('\033[92mY\033[97m or \033[91mN\033[97m')
             YorN = input("> ")
 
