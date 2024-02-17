@@ -1,12 +1,17 @@
 import os
-import platform
-from pystyle import *
 
 from CSV_by_Laix import *
 
 
 print("\033[91m" + "[*] Installing missing modules..." + "\033[97m") 
 
+
+try:
+    import platform
+except ImportError:
+    os.system("py -m pip install platform -q -q -q")
+import platform
+    
 try:
     import csv
 except ImportError:
@@ -30,7 +35,7 @@ try:
 except ImportError:
     os.system("py -m pip install winshell -q -q -q")
     os.system("py -m pip install pywin32 -q -q -q")
-    import winshell
+import winshell
 
 try:
     import logging
@@ -48,7 +53,7 @@ try:
     import pystyle
 except ImportError:
     os.system("py -m pip install pystyle -q -q -q")
-    from pystyle import *
+from pystyle import *
     
 try:
     import plyer
