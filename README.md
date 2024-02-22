@@ -36,7 +36,6 @@ This project was mainly created to improve my Python skills.
    ```bash
    start.bat
    ```
-   or click on "start.bat"
 
 5. Activate the startup option in the Birthday-Reminder.py interaction menu
 
