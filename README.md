@@ -34,7 +34,7 @@ This project was mainly created to improve my Python skills.
 
 4. Run Code :
    ```bash
-   python Birthday-Reminder.py
+   lauch start.bat
    ```
    or click on "start.bat"
 
