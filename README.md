@@ -34,7 +34,7 @@ This project was mainly created to improve my Python skills.
 
 4. Run Code :
    ```bash
-   lauch start.bat
+   start.bat
    ```
    or click on "start.bat"
 
